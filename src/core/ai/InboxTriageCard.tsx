@@ -170,14 +170,14 @@ export default function InboxTriageCard() {
         )}
         {!loading && !error && (
           <div className="ai-card p-0">
-            <div className="ai-triage-compact-list overflow-auto">
+            <div className="ai-triage-compact-list ai-list--compact overflow-auto">
             {visible.map((msg, idx) => {
               const isExpanded = !!expanded[msg.id];
               const proc = !!processing[msg.id];
               return (
                 <div
                 key={msg.id}
-                className={`ai-list-item cursor-pointer ai-triage-row ${idx===focusedIndex?'focus-ring':''}`}
+                className={`ai-list-item ai-list-item--compact cursor-pointer ai-triage-row ${idx===focusedIndex?'focus-ring':''}`}
                 role="button"
                 aria-expanded={isExpanded}
                 draggable
