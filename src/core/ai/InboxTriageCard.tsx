@@ -170,6 +170,7 @@ export default function InboxTriageCard() {
         )}
         {!loading && !error && (
           <div className="ai-card p-0">
+            <div className="ai-triage-compact-list overflow-auto">
             {visible.map((msg, idx) => {
               const isExpanded = !!expanded[msg.id];
               const proc = !!processing[msg.id];
@@ -247,6 +248,7 @@ export default function InboxTriageCard() {
                 </div>
               );
             })}
+            </div>
           </div>
         )}
       </div>
